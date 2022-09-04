@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- Start Header Section -->
+
+    <header id="site-header">
+        <div class="container">
+            <div class="header-part">
+                <div class="header-part__top">
+                    <svg class="header-part-top__search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14.3763 12.4769C16.0462 10.1337 15.8301 6.85958 13.7278 4.75736C11.3847 2.41421 7.58574 2.41421 5.24259 4.75736C2.89944 7.1005 2.89944 10.8995 5.24259 13.2426C7.34482 15.3449 10.6189 15.561 12.9621 13.8911L18.6776 19.6066L20.0918 18.1924L14.3763 12.4769ZM12.3136 6.17157C13.8757 7.73367 13.8757 10.2663 12.3136 11.8284C10.7515 13.3905 8.2189 13.3905 6.6568 11.8284C5.09471 10.2663 5.09471 7.73367 6.6568 6.17157C8.2189 4.60948 10.7515 4.60948 12.3136 6.17157Z"
+                            fill="black" />
+                    </svg>
+                    <a href="./index.html">
+                        <img src="./images/human-logo.svg" width="201" height="30" alt="Our brand's logo">
+                    </a>
+                    <ul class="header-part__list header-top-list">
+                        <li class="header-top-list__item">
+                            <a class="header-top-list__link" href="https://www.vk.com">
+                                <svg class="header-top-list__icon" width="18" height="11" viewBox="0 0 18 11"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.9196 10.3175H15.0183C14.299 10.3175 14.0827 9.735 12.7926 8.44492C11.6667 7.35942 11.191 7.22384 10.9057 7.22384C10.5121 7.22384 10.4039 7.332 10.4039 7.87542V9.58509C10.4039 10.0478 10.2541 10.3188 9.04608 10.3188C7.87375 10.24 6.73685 9.88384 5.72911 9.27959C4.72137 8.67534 3.8716 7.84034 3.24979 6.84334C1.77357 5.00592 0.746417 2.84945 0.25 0.545351C0.25 0.259968 0.358158 0.00195109 0.901558 0.00195109H2.80152C3.29018 0.00195109 3.46611 0.219576 3.65767 0.721276C4.58028 3.437 6.15445 5.79825 6.79298 5.79825C7.03797 5.79825 7.14483 5.69009 7.14483 5.07892V2.28242C7.06403 1.00666 6.38641 0.898501 6.38641 0.437193C6.39511 0.315518 6.45087 0.202026 6.54185 0.120768C6.63283 0.0395178 6.75189 -0.00309891 6.87378 0.00195109H9.8605C10.2684 0.00195109 10.4039 0.205243 10.4039 0.693909V4.46775C10.4039 4.87567 10.5798 5.01117 10.7023 5.01117C10.9473 5.01117 11.1363 4.87567 11.5846 4.42734C12.5474 3.25318 13.3341 1.94501 13.9198 0.544051C13.9797 0.375768 14.0929 0.231701 14.2423 0.133818C14.3918 0.035943 14.5691 -0.0103739 14.7473 0.00195109H16.6485C17.218 0.00195109 17.3392 0.287334 17.218 0.693909C16.5267 2.24258 15.6713 3.71267 14.6664 5.07892C14.4618 5.39167 14.3798 5.55459 14.6664 5.92075C14.8554 6.20609 15.5213 6.76259 15.9696 7.29159C16.621 7.94142 17.162 8.69325 17.5711 9.51734C17.734 10.0464 17.4617 10.3175 16.9196 10.3175Z"
+                                        fill="black" fill-opacity="0.2" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-top-list__item">
+                            <a class="header-top-list__link" href="https://www.facebook.com">
+                                <svg class="header-top-list__icon" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.8333 2.39584C10.8111 2.39584 9.83079 2.80191 9.10796 3.5247C8.38521 4.2475 7.97913 5.22782 7.97913 6.25001V8.39584H5.91663C5.81308 8.39584 5.72913 8.47976 5.72913 8.58334V11.4167C5.72913 11.5203 5.81308 11.6042 5.91663 11.6042H7.97913V17.4167C7.97913 17.5203 8.06308 17.6042 8.16663 17.6042H11C11.1035 17.6042 11.1875 17.5203 11.1875 17.4167V11.6042H13.2682C13.3543 11.6042 13.4293 11.5456 13.4501 11.4622L14.1585 8.62884C14.188 8.51051 14.0985 8.39584 13.9765 8.39584H11.1875V6.25001C11.1875 6.07873 11.2555 5.91445 11.3766 5.79333C11.4977 5.67222 11.662 5.60418 11.8333 5.60418H14C14.1035 5.60418 14.1875 5.52023 14.1875 5.41668V2.58334C14.1875 2.47979 14.1035 2.39584 14 2.39584H11.8333Z"
+                                        fill="black" fill-opacity="0.2" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-top-list__item">
+                            <a class="header-top-list__link" href="https://www.youtube.com">
+                                <svg class="header-top-list__icon" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.82413 4.07543C8.60389 3.85795 11.3963 3.85795 14.1761 4.07543L16.0433 4.22151C17.0834 4.30288 17.9342 5.08238 18.1061 6.11135C18.5363 8.68591 18.5363 11.3141 18.1061 13.8887C17.9342 14.9176 17.0834 15.6971 16.0433 15.7785L14.1761 15.9246C11.3963 16.142 8.60389 16.142 5.82413 15.9246L3.95688 15.7785C2.91682 15.6971 2.06597 14.9176 1.89404 13.8887C1.46387 11.3141 1.46387 8.68591 1.89404 6.11135C2.06597 5.08238 2.91682 4.30288 3.95688 4.22151L5.82413 4.07543ZM8.33339 12.0584V7.94154C8.33339 7.74722 8.54539 7.62719 8.71198 7.72717L12.1428 9.78566C12.3046 9.88274 12.3046 10.1172 12.1428 10.2143L8.71198 12.2728C8.54539 12.3728 8.33339 12.2527 8.33339 12.0584Z"
+                                        fill="black" fill-opacity="0.2" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-top-list__item">
+                            <a class="header-top-list__link" href="https://www.twitter.com">
+                                <svg class="header-top-list__icon" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.1747 5.18938C18.223 5.12207 18.1517 5.03516 18.0744 5.0651C17.5255 5.27788 16.9517 5.42143 16.3666 5.49218C17.0182 5.10291 17.521 4.51034 17.7998 3.80878C17.8282 3.73732 17.7502 3.6735 17.6828 3.71068C17.0772 4.04513 16.4241 4.28595 15.7457 4.42465C15.7172 4.43046 15.688 4.42079 15.6681 4.39975C15.1589 3.86253 14.4887 3.50483 13.7581 3.38122C13.0121 3.25502 12.2453 3.37998 11.5781 3.7365C10.9107 4.09303 10.3807 4.66095 10.0709 5.35121C9.7764 6.00751 9.69699 6.7391 9.84224 7.4417C9.85349 7.49622 9.81082 7.54768 9.75524 7.54423C8.43524 7.46225 7.14545 7.11114 5.96544 6.51206C4.78844 5.9145 3.74616 5.0832 2.9021 4.06943C2.86464 4.02443 2.79364 4.03025 2.76634 4.08205C2.50371 4.58043 2.36619 5.13593 2.36657 5.70051C2.3655 6.26249 2.50341 6.81603 2.76803 7.31181C3.03264 7.8076 3.41575 8.23027 3.88324 8.54218C3.38746 8.52868 2.90136 8.40609 2.45928 8.1839C2.4023 8.15527 2.33396 8.19604 2.33693 8.25973C2.3714 9.00076 2.64344 9.74467 3.11433 10.3155C3.61543 10.9228 4.31094 11.3385 5.08324 11.4922C4.78594 11.5827 4.47729 11.6303 4.16657 11.6338C3.99745 11.6318 3.82866 11.6194 3.66118 11.5965C3.59908 11.588 3.54838 11.647 3.57011 11.7058C3.80046 12.3287 4.20739 12.8723 4.74246 13.269C5.3145 13.6932 6.00454 13.9285 6.71657 13.9422C5.51424 14.8883 4.0298 15.4046 2.4999 15.4088C2.34269 15.4093 2.18556 15.4043 2.0288 15.3936C1.94046 15.3876 1.89984 15.5053 1.97598 15.5504C3.46662 16.4351 5.17039 16.9026 6.90824 16.9005C8.19131 16.9138 9.46415 16.6713 10.6525 16.1873C11.8408 15.7031 12.9207 14.9871 13.8292 14.0809C14.7377 13.1748 15.4566 12.0967 15.9437 10.9096C16.4308 9.72251 16.6766 8.45026 16.6666 7.16718V6.76732C16.6666 6.74101 16.679 6.71627 16.7 6.70041C17.2652 6.27363 17.7623 5.7641 18.1747 5.18938Z"
+                                        fill="black" fill-opacity="0.2" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-top-list__item">
+                            <a class="header-top-list__link" href="https://www.telegram.com">
+                                <svg class="header-top-list__icon" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.0217 16.5752L14.0223 16.5737L14.0368 16.5375L16.5358 3.93827V3.89734C16.5358 3.58342 16.4198 3.30937 16.1674 3.14499C15.9465 3.00111 15.6925 2.99087 15.5145 3.00438C15.326 3.01867 15.1485 3.06569 15.0255 3.10482C14.9623 3.12496 14.9094 3.14435 14.8715 3.15902C14.8525 3.16639 14.837 3.17264 14.8259 3.17729L14.8149 3.18192L0.881699 8.64771L0.877866 8.64904C0.870341 8.65179 0.860391 8.65554 0.848366 8.66021C0.824408 8.66954 0.791791 8.68287 0.753474 8.70029C0.678241 8.73437 0.574291 8.78696 0.468874 8.85912C0.289833 8.98179 -0.0511006 9.27204 0.0064661 9.73221C0.0541494 10.1134 0.316908 10.3555 0.49405 10.4808C0.589 10.548 0.679849 10.5965 0.746374 10.6281C0.780074 10.6442 0.808708 10.6565 0.830033 10.6651C0.840724 10.6695 0.849658 10.673 0.856575 10.6756L0.865433 10.6789L0.871091 10.681L3.30879 11.5017C3.30057 11.6546 3.31573 11.8105 3.35629 11.9645L4.57737 16.5965C4.72214 17.1456 5.219 17.5282 5.78697 17.5278C6.29608 17.5275 6.74761 17.2195 6.93942 16.76L8.8458 14.7215L12.12 17.2317L12.1666 17.252C12.464 17.3819 12.742 17.423 12.996 17.3883C13.2498 17.3536 13.4514 17.2472 13.6029 17.126C13.752 17.0068 13.854 16.8722 13.9183 16.7709C13.951 16.7194 13.9753 16.6741 13.9921 16.64C14.0006 16.623 14.0073 16.6085 14.0123 16.5972L14.0186 16.5827L14.0209 16.5774L14.0217 16.5752ZM4.56496 11.6458C4.53721 11.5405 4.58077 11.4294 4.67268 11.371L12.9411 6.12027C12.9411 6.12027 13.4274 5.82502 13.41 6.12027C13.41 6.12027 13.4968 6.1724 13.2361 6.41551C12.989 6.64641 7.34313 12.0973 6.77182 12.6489C6.73884 12.6807 6.71916 12.7172 6.70753 12.7615L5.78603 16.2778L4.56496 11.6458Z"
+                                        fill="black" fill-opacity="0.2" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-top-list__item">
+                            <a class="header-top-list__link" href="https://www.instagram.com">
+                                <svg class="header-top-list__icon" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.99996 7.29166C8.50421 7.29166 7.29163 8.50424 7.29163 9.99999C7.29163 11.4957 8.50421 12.7083 9.99996 12.7083C11.4957 12.7083 12.7083 11.4957 12.7083 9.99999C12.7083 8.50424 11.4957 7.29166 9.99996 7.29166Z"
+                                        fill="black" fill-opacity="0.2" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M5.64132 2.56789C8.51478 2.24674 11.4854 2.24674 14.3588 2.56789C15.9408 2.7447 17.2168 3.99118 17.4024 5.57872C17.746 8.51625 17.746 11.4837 17.4024 14.4212C17.2168 16.0088 15.9408 17.2553 14.3588 17.4321C11.4854 17.7532 8.51478 17.7532 5.64132 17.4321C4.05932 17.2553 2.78332 16.0088 2.59764 14.4212C2.25407 11.4837 2.25407 8.51625 2.59764 5.57872C2.78332 3.99118 4.05932 2.7447 5.64132 2.56789ZM14.1667 5C13.7064 5 13.3334 5.3731 13.3334 5.83333C13.3334 6.29356 13.7064 6.66666 14.1667 6.66666C14.6269 6.66666 15 6.29356 15 5.83333C15 5.3731 14.6269 5 14.1667 5ZM6.0417 10C6.0417 7.81387 7.81391 6.04166 10 6.04166C12.1862 6.04166 13.9584 7.81387 13.9584 10C13.9584 12.1862 12.1862 13.9583 10 13.9583C7.81391 13.9583 6.0417 12.1862 6.0417 10Z"
+                                        fill="black" fill-opacity="0.2" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="header-part__nav-btn" type="button"></button>
+                </div>
+                <div class="header-part__bottom">
+                    <ul class="header-part__bottom-list header-bottom-list">
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Мир</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Узбекистан</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Политика</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Спорт</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Развлечение</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Бизнес</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Стиль</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Технологии</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link" href="#">Видео</a>
+                        </li>
+                        <li class="header-bottom-list__item">
+                            <a class="header-bottom-list__link header-bottom-list__link--more" href="#">Ещё</a>
+                        </li>
+                    </ul>
+                    <div class="header-part__form-box header-form-box">
+                        <select class="header-form-box__select" name="site_language" id="language">
+                            <option class="header-form-box__options" value="Russian">Русский</option>
+                            <option class="header-form-box__options" value="English">Англиский</option>
+                            <option class="header-form-box__options" value="Russian">Узбекский</option>
+                        </select>
+                        <svg class="header-part-bottom__search-icon" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.3763 12.4769C16.0462 10.1337 15.8301 6.85958 13.7278 4.75736C11.3847 2.41421 7.58574 2.41421 5.24259 4.75736C2.89944 7.1005 2.89944 10.8995 5.24259 13.2426C7.34482 15.3449 10.6189 15.561 12.9621 13.8911L18.6776 19.6066L20.0918 18.1924L14.3763 12.4769ZM12.3136 6.17157C13.8757 7.73367 13.8757 10.2663 12.3136 11.8284C10.7515 13.3905 8.2189 13.3905 6.6568 11.8284C5.09471 10.2663 5.09471 7.73367 6.6568 6.17157C8.2189 4.60948 10.7515 4.60948 12.3136 6.17157Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- End of Header Section -->
+
+    <!-- Start Main Section -->
+    <main id="site-main">
+
+        <!-- Start Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-part">
+                    <div class="section-title-box">
+                        <svg class="section-title-box__img" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="4" cy="4" r="4" fill="#E87525" />
+                        </svg>
+                        <h2 class="section-title-box__title">Последние новости</h2>
+                        <div class="section-title-box__line"></div>
+                    </div>
+                    <div class="hero-part__main-info hero-main-info">
+                        <a class="hero-main-info__link-main" href="#">
+                            <div class="hero-main-info__img-box">
+                                <img class="hero-main-info__img cards-images" src="./images/card-image.jpg" width="555"
+                                    height="350" alt="Card image"
+                                    srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                <span class="card-list__card-name">Обращение</span>
+                            </div>
+                            <div class="hero-main-info__info-box hero-info-box">
+                                <div class="hero-info-box__top-view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <h3 class="hero-info-box__title">Шавкат Мирзиёев назвал главную суть идеологии страны
+                                </h3>
+                                <p class="hero-info-box__text">«Идеологией создаваемого нами нового Узбекистана будут
+                                    доброта, человечность, гуманизм. Когда мы говорим об идеологии, то имеем в виду,
+                                    прежде
+                                    всего, воспитание разума, воспитание национальных и общечеловеческих ценностей», —
+                                    заявил президент. Шавкат Мирзиёев предложил создать Институт социально-духовных
+                                    исследований. Кроме того, Республиканский центр духовности и просветительства теперь
+                                    будет координировать духовно-просветительскую деятельность всех госорганов.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <ul class="hero-part__card-list card-list">
+                        <li class="card-list__item">
+                            <a class="card-list__item-link" href="#">
+                                <div class="card-list__img-box">
+                                    <img class="card-list__img cards-images" src="./images/card-image.jpg" width="263"
+                                        height="160" alt="Card images"
+                                        srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                    <span class="card-list__card-name">Проекты</span>
+                                </div>
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <h4 class="card-list__title">В Узбекистане в прошлом году умерло 175,6 тысячи человек.
+                                </h4>
+                            </a>
+                        </li>
+                        <li class="card-list__item">
+                            <a class="card-list__item-link" href="#">
+                                <div class="card-list__img-box">
+                                    <img class="card-list__img cards-images" src="./images/card-image.jpg" width="263"
+                                        height="160" alt="Card images"
+                                        srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                    <span class="card-list__card-name">Проекты</span>
+                                </div>
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <h4 class="card-list__title">В Узбекистане нет ни административной, ни уголовной
+                                    ответственности
+                                </h4>
+                            </a>
+                        </li>
+                        <li class="card-list__item">
+                            <a class="card-list__item-link" href="#">
+                                <div class="card-list__img-box">
+                                    <img class="card-list__img cards-images" src="./images/card-image.jpg" width="263"
+                                        height="160" alt="Card images"
+                                        srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                    <span class="card-list__card-name">Проекты</span>
+                                </div>
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <h4 class="card-list__title">В Узбекистане готовится пакет мер по кардинальному
+                                    изменению системы поступления и учебы в вузах
+                                </h4>
+                            </a>
+                        </li>
+                        <li class="card-list__item">
+                            <a class="card-list__item-link" href="#">
+                                <div class="card-list__img-box">
+                                    <img class="card-list__img cards-images" src="./images/card-image.jpg" width="263"
+                                        height="160" alt="Card images"
+                                        srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                    <span class="card-list__card-name">Проекты</span>
+                                </div>
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <h4 class="card-list__title">В Узбекистане в прошлом году умерло 175,6 тысячи человек.
+                                </h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End of Hero Section -->
+
+        <!-- Start Popular News Section -->
+        <section id="popular-news">
+            <div class="container">
+                <div class="popular-news-main-part">
+                    <div class="popular-news-part">
+                        <div class="section-title-box main-section-title-box">
+                            <svg class="section-title-box__img" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4" cy="4" r="4" fill="#E87525" />
+                            </svg>
+                            <h2 class="section-title-box__title main-section-title-box__title">Популярные новости</h2>
+                            <div class="section-title-box__line"></div>
+                            <a class="section-title-box__link" href="#">Посмотреть все</a>
+                        </div>
+                        <div class="popular-news-part__main-info-box popular-main-info-box">
+                            <ul class="popular-main-info-box__list card-list">
+                                <li class="popular-main-info-box__item">
+                                    <a class="popular-main-info-box__link-box" href="#">
+                                        <div class="card-list__img-box">
+                                            <img class="card-list__img cards-images" src="./images/card-image.jpg"
+                                                width="409" height="250" alt="Card images"
+                                                srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                            <span class="card-list__card-name">Проекты</span>
+                                        </div>
+                                        <div class="hero-info-box__top-view card-list__view">
+                                            <time class="hero-info-box__top-view__time"
+                                                datetime="2022-02-14">14.02.2022</time>
+                                            <span class="hero-info-box__top-view__counter">22321</span>
+                                        </div>
+                                        <h4 class="card-list__title">Застройщик отхватил зеленую зону возле ТРЦ
+                                            "Пойтахт".
+                                            Ташкентцы боятся, что деревья пойдут в расход
+                                        </h4>
+                                    </a>
+                                </li>
+                                <li class="popular-main-info-box__item">
+                                    <a class="popular-main-info-box__link-box" href="#">
+                                        <div class="card-list__img-box">
+                                            <img class="card-list__img cards-images" src="./images/card-image.jpg"
+                                                width="409" height="250" alt="Card images"
+                                                srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                            <span class="card-list__card-name">Проекты</span>
+                                        </div>
+                                        <div class="hero-info-box__top-view card-list__view">
+                                            <time class="hero-info-box__top-view__time"
+                                                datetime="2022-02-14">14.02.2022</time>
+                                            <span class="hero-info-box__top-view__counter">22321</span>
+                                        </div>
+                                        <h4 class="card-list__title">Уровень смертности в 2020 году вырос на 13,5%,
+                                            число
+                                            избыточных смертей — свыше 20,2 тысячи (уточнено)
+                                        </h4>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="popular-info-box__list card-list">
+                                <li class="popular-info-box__item">
+                                    <a class="popular-info-box__link" href="#">
+                                        <div class="card-list__img-box">
+                                            <img class="card-list__img cards-images popular-main-info-box__img"
+                                                src="./images/card-image.jpg" width="263" height="160" alt="Card images"
+                                                srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                            <span class="card-list__card-name">Проекты</span>
+                                        </div>
+                                        <div class="popular-info-box__info">
+                                            <div class="hero-info-box__top-view card-list__view">
+                                                <time class="hero-info-box__top-view__time"
+                                                    datetime="2022-02-14">14.02.2022</time>
+                                                <span class="hero-info-box__top-view__counter">22321</span>
+                                            </div>
+                                            <h4 class="card-list__title">Навальный опубликовал расследование о "дворце
+                                                Путина".</h4>
+                                            <p class="card-list__text">Во вступительной части к фильму, опубликованному
+                                                на YouTube-канале Навального, оппозиционер поясняет, что задумал
+                                                расследование, еще когда был в реанимации берлинской больницы. Однако
+                                                было решено, что опубликуют текст только после того, как оппозиционер
+                                                вернется в Россию.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-info-box__item">
+                                    <a class="popular-info-box__link" href="#">
+                                        <div class="card-list__img-box">
+                                            <img class="card-list__img cards-images popular-main-info-box__img"
+                                                src="./images/card-image.jpg" width="263" height="160" alt="Card images"
+                                                srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                            <span class="card-list__card-name">Проекты</span>
+                                        </div>
+                                        <div class="popular-info-box__info">
+                                            <div class="hero-info-box__top-view card-list__view">
+                                                <time class="hero-info-box__top-view__time"
+                                                    datetime="2022-02-14">14.02.2022</time>
+                                                <span class="hero-info-box__top-view__counter">22321</span>
+                                            </div>
+                                            <h4 class="card-list__title">Вечный лидер? Трамп уходит, но не прощается
+                                            </h4>
+                                            <p class="card-list__text">Дональд Трамп стал первым в истории президентом
+                                                США, которому был дважды объявлен импичмент. Несмотря на это, в
+                                                Вашингтоне уверены, что именно он в ближайшие годы сохранит статус
+                                                самого влиятельного консервативного политика в Соединенных Штатах.
+                                            <p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-info-box__item">
+                                    <a class="popular-info-box__link" href="#">
+                                        <div class="card-list__img-box">
+                                            <img class="card-list__img cards-images popular-main-info-box__img"
+                                                src="./images/card-image.jpg" width="263" height="160" alt="Card images"
+                                                srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                            <span class="card-list__card-name">Проекты</span>
+                                        </div>
+                                        <div class="popular-info-box__info">
+                                            <div class="hero-info-box__top-view card-list__view">
+                                                <time class="hero-info-box__top-view__time"
+                                                    datetime="2022-02-14">14.02.2022</time>
+                                                <span class="hero-info-box__top-view__counter">22321</span>
+                                            </div>
+                                            <h4 class="card-list__title">Навальный опубликовал расследование о "дворце
+                                                Путина".</h4>
+                                            <p class="card-list__text">Во вступительной части к фильму, опубликованному
+                                                на YouTube-канале Навального, оппозиционер поясняет, что задумал
+                                                расследование, еще когда был в реанимации берлинской больницы. Однако
+                                                было решено, что опубликуют текст только после того, как оппозиционер
+                                                вернется в Россию.</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-info-box__item">
+                                    <a class="popular-info-box__link" href="#">
+                                        <div class="card-list__img-box">
+                                            <img class="card-list__img cards-images popular-main-info-box__img"
+                                                src="./images/card-image.jpg" width="263" height="160" alt="Card images"
+                                                srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                            <span class="card-list__card-name">Проекты</span>
+                                        </div>
+                                        <div class="popular-info-box__info">
+                                            <div class="hero-info-box__top-view card-list__view">
+                                                <time class="hero-info-box__top-view__time"
+                                                    datetime="2022-02-14">14.02.2022</time>
+                                                <span class="hero-info-box__top-view__counter">22321</span>
+                                            </div>
+                                            <h4 class="card-list__title">"Спаситель мира" найден в шкафу в Неаполе. Его
+                                                пропажу никто не заметил</h4>
+                                            <p class="card-list__text">Копия "Спасителя мира" (Salvator Mundi),
+                                                предположительно выполненная одним из учеников Леонардо да Винчи, была
+                                                обнаружена в субботу в шкафу спальни в одной из неаполитанских квартир.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="popular-info-box__item">
+                                    <a class="popular-info-box__link" href="#">
+                                        <div class="card-list__img-box">
+                                            <img class="card-list__img cards-images popular-main-info-box__img"
+                                                src="./images/card-image.jpg" width="263" height="160" alt="Card images"
+                                                srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                            <span class="card-list__card-name">Проекты</span>
+                                        </div>
+                                        <div class="popular-info-box__info">
+                                            <div class="hero-info-box__top-view card-list__view">
+                                                <time class="hero-info-box__top-view__time"
+                                                    datetime="2022-02-14">14.02.2022</time>
+                                                <span class="hero-info-box__top-view__counter">22321</span>
+                                            </div>
+                                            <h4 class="card-list__title">Надзирательницы Равенсбрюка: как обычные
+                                                женщины стали палачами СС</h4>
+                                            <div class="card-list__text-box">
+                                                <p class="card-list__text">В нем не было упомянуто, что "одежда" - это
+                                                    эсэсовская форма, а "объект" - женский концлагерь Равенсбрюк
+                                                    примерно в 80 километрах севернее Берлина.
+                                                <p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="site-ads-box">
+                        <span class="site-ads-box__size">262х460 </span>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <!-- End of Popular News Section -->
+
+        <!-- Start World Section -->
+        <section id="world-news">
+            <div class="container">
+                <div class="world-news-part">
+                    <div class="section-title-box main-section-title-box">
+                        <svg class="section-title-box__img" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="4" cy="4" r="4" fill="#E87525" />
+                        </svg>
+                        <h2 class="section-title-box__title main-section-title-box__title">Мир</h2>
+                        <div class="section-title-box__line"></div>
+                        <a class="section-title-box__link" href="#">Посмотреть все</a>
+                    </div>
+                    <div class="world-news-part__top-info world-top-info">
+                        <ul class="world-top-info__list">
+                            <li class="world-top-info__item ">
+                                <a class="card-list__item-link world-top-info__link--desktop" href="#">
+                                    <div class="card-list__img-box">
+                                        <img class="world-top-info__link-image world-card-img cards-images"
+                                            src="./images/card-image.jpg" width="555" height="350" alt="Card images"
+                                            srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                        <span class="card-list__card-name">Проекты</span>
+                                    </div>
+                                    <div class="world-top-info__item-box">
+                                        <div class="hero-info-box__top-view card-list__view">
+                                            <time class="hero-info-box__top-view__time"
+                                                datetime="2022-02-14">14.02.2022</time>
+                                            <span class="hero-info-box__top-view__counter">22321</span>
+                                        </div>
+                                        <div class="world-top-info__item-text-box">
+                                            <h4 class="card-list__title world-top-info__item-text">Математик и анархист
+                                                Мифтахов получил шесть лет по
+                                                делу
+                                                о брошенной дымовой шашке
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="card-list__worl-item world-top-info__item">
+                                <a class="card-list__item-link" href="#">
+                                    <div class="card-list__img-box">
+                                        <img class="world-top-info__link-image cards-images"
+                                            src="./images/card-image.jpg" width="263" height="160" alt="Card images"
+                                            srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                        <span class="card-list__card-name">Проекты</span>
+                                    </div>
+                                    <div class="hero-info-box__top-view card-list__view">
+                                        <time class="hero-info-box__top-view__time"
+                                            datetime="2022-02-14">14.02.2022</time>
+                                        <span class="hero-info-box__top-view__counter">22321</span>
+                                    </div>
+                                    <h4 class="card-list__title">В Узбекистане в прошлом году умерло 175,6 тысячи
+                                        человек.
+                                    </h4>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="world-top-info-cards-list card-list">
+                            <li class="card-list__item">
+                                <a class="card-list__item-link" href="#">
+                                    <div class="card-list__img-box">
+                                        <img class="card-list__img cards-images" src="./images/card-image.jpg"
+                                            width="263" height="160" alt="Card images"
+                                            srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                        <span class="card-list__card-name">Проекты</span>
+                                    </div>
+                                    <div class="hero-info-box__top-view card-list__view">
+                                        <time class="hero-info-box__top-view__time"
+                                            datetime="2022-02-14">14.02.2022</time>
+                                        <span class="hero-info-box__top-view__counter">22321</span>
+                                    </div>
+                                    <h4 class="card-list__title">Карину Цуркан из "Интер РАО" приговорили к 15 годам по
+                                        делу о шпионаже
+                                    </h4>
+                                </a>
+                            </li>
+                            <li class="card-list__item">
+                                <a class="card-list__item-link" href="#">
+                                    <div class="card-list__img-box">
+                                        <img class="card-list__img cards-images" src="./images/card-image.jpg"
+                                            width="263" height="160" alt="Card images"
+                                            srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                        <span class="card-list__card-name">Проекты</span>
+                                    </div>
+                                    <div class="hero-info-box__top-view card-list__view">
+                                        <time class="hero-info-box__top-view__time"
+                                            datetime="2022-02-14">14.02.2022</time>
+                                        <span class="hero-info-box__top-view__counter">22321</span>
+                                    </div>
+                                    <h4 class="card-list__title">Сакартвело, Аотеароа и другие страны, которые меняют
+                                        название
+                                    </h4>
+                                </a>
+                            </li>
+                            <li class="card-list__item">
+                                <a class="card-list__item-link" href="#">
+                                    <div class="card-list__img-box">
+                                        <img class="card-list__img cards-images" src="./images/card-image.jpg"
+                                            width="263" height="160" alt="Card images"
+                                            srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                        <span class="card-list__card-name">Проекты</span>
+                                    </div>
+                                    <div class="hero-info-box__top-view card-list__view">
+                                        <time class="hero-info-box__top-view__time"
+                                            datetime="2022-02-14">14.02.2022</time>
+                                        <span class="hero-info-box__top-view__counter">22321</span>
+                                    </div>
+                                    <h4 class="card-list__title">Новый штамм коронавируса: что мы о нем знаем?
+                                    </h4>
+                                </a>
+                            </li>
+                            <li class="card-list__item">
+                                <a class="card-list__item-link" href="#">
+                                    <div class="card-list__img-box">
+                                        <img class="card-list__img cards-images" src="./images/card-image.jpg"
+                                            width="263" height="160" alt="Card images"
+                                            srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                        <span class="card-list__card-name">Проекты</span>
+                                    </div>
+                                    <div class="hero-info-box__top-view card-list__view">
+                                        <time class="hero-info-box__top-view__time"
+                                            datetime="2022-02-14">14.02.2022</time>
+                                        <span class="hero-info-box__top-view__counter">22321</span>
+                                    </div>
+                                    <h4 class="card-list__title">Супермодель в хиджабе Халима Аден: почему я ушла с
+                                        подиума и не жалею об этом
+                                    </h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <aside class="world-ads-box">
+                        <p class="world-ads-box__text">1140х200</p>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <!-- End of World Section -->
+
+        <!-- Start Video Section -->
+        <section id="video-section">
+            <div class="container">
+                <div class="video-part">
+                    <div class="section-title-box main-section-title-box">
+                        <svg class="section-title-box__img" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="4" cy="4" r="4" fill="#E87525" />
+                        </svg>
+                        <h2 class="section-title-box__title main-section-title-box__title">Видео</h2>
+                        <div class="section-title-box__line"></div>
+                        <a class="section-title-box__link" href="#">Посмотреть все</a>
+                    </div>
+                    <div class="video-part-main">
+                        <div class="video-part__main-video-box">
+                            <iframe class="main-video-box__video" width="788" height="443"
+                                src="https://www.youtube.com/embed/xFIoXwdLjKU"
+                                title="AMALDOR: U kim? Qanday lavozimda?" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                            <div class="main-video-box__text-box">
+                                <div class="hero-info-box__top-view card-list__view video-list--view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="main-video-box__text-box-link" href="#">Шавкат Мирзиёев назвал главную суть
+                                    идеологии страны</a>
+                                <p class="main-video-box__video-description">«Идеологией создаваемого нами нового
+                                    Узбекистана будут доброта, человечность, гуманизм. Когда мы говорим об идеологии, то
+                                    имеем в виду, прежде всего, воспитание разума, воспитание национальных </p>
+                            </div>
+                        </div>
+                        <div class="video-part__main-swiper-box">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card-list__worl-item world-top-info__item swiper-card-item">
+                                            <a class="card-list__item-link" href="#">
+                                                <div class="card-list__img-box">
+                                                    <img class="world-top-info__link-image cards-images"
+                                                        src="./images/card-image.jpg" width="263" height="160"
+                                                        alt="Card images"
+                                                        srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                                    <span class="card-list__card-name">Проекты</span>
+                                                </div>
+                                                <div class="hero-info-box__top-view card-list__view">
+                                                    <time class="hero-info-box__top-view__time"
+                                                        datetime="2022-02-14">14.02.2022</time>
+                                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                                </div>
+                                                <h4 class="card-list__title swiper-card-list-title">Мировые СМИ о
+                                                    захвате Капитолия и будущем
+                                                    Дональда Трампа
+                                                </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-list__worl-item world-top-info__item swiper-card-item">
+                                            <a class="card-list__item-link" href="#">
+                                                <div class="card-list__img-box">
+                                                    <img class="world-top-info__link-image cards-images"
+                                                        src="./images/card-image.jpg" width="263" height="160"
+                                                        alt="Card images"
+                                                        srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                                    <span class="card-list__card-name">Проекты</span>
+                                                </div>
+                                                <div class="hero-info-box__top-view card-list__view">
+                                                    <time class="hero-info-box__top-view__time"
+                                                        datetime="2022-02-14">14.02.2022</time>
+                                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                                </div>
+                                                <h4 class="card-list__title swiper-card-list-title">Мировые СМИ о
+                                                    захвате Капитолия и будущем
+                                                    Дональда Трампа
+                                                </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-list__worl-item world-top-info__item swiper-card-item">
+                                            <a class="card-list__item-link" href="#">
+                                                <div class="card-list__img-box">
+                                                    <img class="world-top-info__link-image cards-images"
+                                                        src="./images/card-image.jpg" width="263" height="160"
+                                                        alt="Card images"
+                                                        srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                                    <span class="card-list__card-name">Проекты</span>
+                                                </div>
+                                                <div class="hero-info-box__top-view card-list__view">
+                                                    <time class="hero-info-box__top-view__time"
+                                                        datetime="2022-02-14">14.02.2022</time>
+                                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                                </div>
+                                                <h4 class="card-list__title swiper-card-list-title">Ловушка токсичной
+                                                    позитивности: что это и как
+                                                    из нее выбраться
+                                                </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card-list__worl-item world-top-info__item swiper-card-item">
+                                            <a class="card-list__item-link" href="#">
+                                                <div class="card-list__img-box">
+                                                    <img class="world-top-info__link-image cards-images"
+                                                        src="./images/card-image.jpg" width="263" height="160"
+                                                        alt="Card images"
+                                                        srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                                    <span class="card-list__card-name">Проекты</span>
+                                                </div>
+                                                <div class="hero-info-box__top-view card-list__view">
+                                                    <time class="hero-info-box__top-view__time"
+                                                        datetime="2022-02-14">14.02.2022</time>
+                                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                                </div>
+                                                <h4 class="card-list__title swiper-card-list-title">Мировые СМИ о
+                                                    захвате Капитолия и будущем
+                                                    Дональда Трампа
+                                                </h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Video Section -->
+
+        <!-- Start Sport and Technology -->
+        <section id="sport-technology">
+            <div class="container">
+                <div class="sport-technology-part">
+                    <div class="sport-part">
+                        <div class="section-title-box main-section-title-box">
+                            <svg class="section-title-box__img" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4" cy="4" r="4" fill="#E87525" />
+                            </svg>
+                            <h2 class="section-title-box__title main-section-title-box__title">Спорт</h2>
+                            <div class="section-title-box__line"></div>
+                        </div>
+                        <div class="sport-part__box">
+                            <div class="hero-main-info__img-box">
+                                <img class="hero-main-info__img cards-images" src="./images/card-image.jpg" width="555"
+                                    height="350" alt="Card image"
+                                    srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                <span class="card-list__card-name">Хоккей</span>
+                            </div>
+                            <div class="sport-tech-text-box">
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="sport-tech-text" href="#">В Нурафшане планируется наладить производство
+                                    военной и
+                                    спецтехники</a>
+                            </div>
+                            <div class="sport-tech-text-box">
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span
+                                        class="sport-tech-text-box__direction hero-info-box__top-view__time">Хоккей</span>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="sport-tech-text" href="#">В Нурафшане планируется наладить производство
+                                    военной и
+                                    спецтехники</a>
+                            </div>
+                            <div class="sport-tech-text-box">
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span
+                                        class="sport-tech-text-box__direction hero-info-box__top-view__time">Хоккей</span>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="sport-tech-text" href="#">Отабек Умаров избран
+                                    вице-президентом Олимпийского совета
+                                    Азии</a>
+                            </div>
+                            <div class="sport-tech-text-box">
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span
+                                        class="sport-tech-text-box__direction hero-info-box__top-view__time">Хоккей</span>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="sport-tech-text" href="#">Теннисист Темур Исмаилов дисквалифицирован на семь
+                                    лет за
+                                    договорные матчи</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="technology-part">
+                        <div class="section-title-box main-section-title-box">
+                            <svg class="section-title-box__img" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4" cy="4" r="4" fill="#E87525" />
+                            </svg>
+                            <h2 class="section-title-box__title main-section-title-box__title">Технологии</h2>
+                            <div class="section-title-box__line"></div>
+                        </div>
+                        <div class="technology-part__box">
+                            <div class="hero-main-info__img-box">
+                                <img class="hero-main-info__img cards-images" src="./images/card-image.jpg" width="555"
+                                    height="350" alt="Card image"
+                                    srcset="./images/card-image.jpg 1x, ./images/card-image@2x.jpg 2x">
+                                <span class="card-list__card-name">Разработки</span>
+                            </div>
+                            <div class="sport-tech-text-box">
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="sport-tech-text" href="#">За нарушение законодательства о госзакупках введены
+                                    штрафы
+                                </a>
+                            </div>
+                            <div class="sport-tech-text-box">
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span
+                                        class="sport-tech-text-box__direction hero-info-box__top-view__time">Разработки</span>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="sport-tech-text" href="#">Застройщик отхватил зеленую зону возле ТРЦ
+                                    "Пойтахт".
+                                    Ташкентцы боятся, что деревья пойдут в расход</a>
+                            </div>
+                            <div class="sport-tech-text-box">
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span
+                                        class="sport-tech-text-box__direction hero-info-box__top-view__time">Разработки</span>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="sport-tech-text" href="#">Инвесторы предлагают восемь проектов по производству
+                                    авто —
+                                    президент</a>
+                            </div>
+                            <div class="sport-tech-text-box">
+                                <div class="hero-info-box__top-view card-list__view">
+                                    <time class="hero-info-box__top-view__time" datetime="2022-02-14">14.02.2022</time>
+                                    <span
+                                        class="sport-tech-text-box__direction hero-info-box__top-view__time">Разработки</span>
+                                    <span class="hero-info-box__top-view__counter">22321</span>
+                                </div>
+                                <a class="sport-tech-text" href="#">В Нурафшане планируется наладить производство
+                                    военной и
+                                    спецтехники</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Sport and Technology -->
+
+        <section id="over-footer">
+            <div class="container">
+                <div class="over-footer">
+                    <div class="over-footer-logo-box">
+                        <a class="over-footer__logo" href="./index.html">
+                            <img src="./images/footer-logo.svg" width="154" height="30" alt="Our brand's logo">
+                        </a>
+                    </div>
+                    <div class="over-footer__info-box">
+                        <div class="over-footer__info">
+                            <ul class="over-footer__list">
+                                <li class="over-footer__item">
+                                    <a class="over-footer__link" href="#">О нас</a>
+                                </li>
+                                <li class="over-footer__item">
+                                    <a class="over-footer__link" href="#">Правила портала</a>
+                                </li>
+                                <li class="over-footer__item">
+                                    <a class="over-footer__link" href="#">Вакансии</a>
+                                </li>
+                                <li class="over-footer__item">
+                                    <a class="over-footer__link" href="#">Контакты</a>
+                                </li>
+                                <li class="over-footer__item">
+                                    <a class="over-footer__link" href="#">Реклама</a>
+                                </li>
+                            </ul>
+                            <div class="over-footer__info-text-box">
+                                <p class="over-footer__info-text">Воспроизводство, копирование, тиражирование,
+                                    распространение и иное использование информации с сайта «human.uz» возможно только с
+                                    прeедварительного письменного разрешения редакции</p>
+                                <br>
+                                <p class="over-footer__info-text">
+                                    Регистрация электронного СМИ: №0460 от 13 августа 2019 года.
+                                    <br>
+                                    Учредитель: ООО «humanuz»
+                                    <br>
+                                    Главный редактор: Клиент
+                                    <br>
+                                    Адрес: 100001, Ташкент
+                                    <br>
+                                    Почта: info@human.uz
+                                </p>
+                            </div>
+                        </div>
+                        <div class="over-footer__links-box">
+                            <a class="over-footer-link"
+                                href="https://play.google.com/store/apps/details?id=sirojiddin.bosimbekov.com.human_uz"
+                                target="blank" rel="noopener noreferrer">
+                                <img src="./images/google-play-img.svg" width="216" height="64" alt=""></a>
+                            <a class="over-footer-link"
+                                href="https://apps.apple.com/uz/app/humanuz/id1571498299#?platform=iphone"
+                                target="blank" rel="noopener noreferrer">
+                                <img src="./images/app-store-img.svg" width="216" height="64" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- End of Main Section -->
+
+    <!-- Start Footer Section -->
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-part">
+                <p class="footer-part__text">© Human.uz 2021. Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer Section-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
